@@ -88,7 +88,7 @@ export default function Form() {
     }, [formData, touch])
     useEffect(() => {
         const checkSession = async () => {
-            const res = await fetch("http://localhost:4000/", {
+            const res = await fetch("https://sphinx-id-wtp1.vercel.app/", {
                 method: "GET",
                 credentials: "include",
                 cache: "no-store"
@@ -100,7 +100,7 @@ export default function Form() {
     }, [])
     useEffect(() => {
         const checkUser = async () => {
-            const res = await fetch("http://localhost:4000/student-is-approved", {
+            const res = await fetch("https://sphinx-id-wtp1.vercel.app/student-is-approved", {
                 method: "GET",
                 credentials: "include",
                 cache: "no-store"
@@ -126,7 +126,7 @@ export default function Form() {
                 formData.email.slice(0, 3) +
                 formData.camp;
 
-            const res = await fetch("http://localhost:4000/apply", {
+            const res = await fetch("https://sphinx-id-wtp1.vercel.app/apply", {
                 method: "POST",
                 credentials: "include",
                 headers: {
