@@ -89,6 +89,7 @@ export default function Form() {
     useEffect(() => {
         const checkSession = async () => {
             const res = await fetch("https://sphinx-id-wtp1.vercel.app/getsession", {
+                
                 method: "GET",
                 credentials: "include",
                 cache: "no-store"
