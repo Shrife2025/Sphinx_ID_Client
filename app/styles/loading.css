@@ -1,0 +1,30 @@
+:root {
+  --bg-loading: #402054;
+  --spinner-base: #eee;
+  --spinner-active: #4a7dff;
+}
+
+.loading_page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-loading);
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid var(--spinner-base);
+  border-top: 5px solid var(--spinner-active);
+  border-radius: 50%;
+  animation: spin 1s linear infinite alternate forwards;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

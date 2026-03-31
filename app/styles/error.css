@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+main {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  gap: 20px;
+}
+.info {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  flex-direction: column;
+
+  position: relative;
+}
+
+.info span {
+  animation: trans 2s linear infinite;
+  color: #4a7dff;
+}
+.info h1 {
+  color: #ff6b6b;
+  font-size: 200px;
+  font-family: "Inter", sans-serif;
+}
+@media (max-width:600px) {
+  .info h1{
+    font-size: 100px;
+  }
+}
+.info h2 {
+  font-size: 14px;
+  font-weight: 100;
+  font-family: "Inter", sans-serif;
+}
+.subtitle {
+  color: #eee;
+  font-family: "Arial", Helvetica, sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  animation: slideIn 1s ease forwards;
+  margin: 0;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes trans {
+  0% {
+    filter: drop-shadow(0 0 30px #4a7dff55);
+  }
+
+  50% {
+    filter: drop-shadow(0 0 90px #4a7dffbb);
+  }
+
+  100% {
+    filter: drop-shadow(0 0 30px #4a7dff55);
+  }
+}
+
+.info p {
+  font-size: 12px;
+  font-family: "Inter", sans-serif;
+  color: #eee;
+  text-align: center;
+  width: 80%;
+  max-width: 400px;
+}
+main .links {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+ .info a,
+.info button {
+  text-decoration: none;
+  background: #4a7dff;
+  width: 50%;
+  color: #eee;
+  padding: 10px;
+  margin-top: 50px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  font-family: "Inter", sans-serif;
+  border: 1px solid #4a7dff;
+  font-size: 12px;
+}
+.info button {
+  background: transparent;
+  border: 1px solid #4a7dff;
+  color: #4a7dff;
+  cursor:  pointer !important;
+}
+.info a:hover {
+  background: transparent;
+  color: #4a7dff;
+}
+.info button:hover {
+  background-color: #4a7dff;
+  color: #eee;
+  transition: 0.5s ease-in-out all;
+}
+
+@media (max-width:600px){
+  h1{
+    font-size: 50px;
+  }
+}

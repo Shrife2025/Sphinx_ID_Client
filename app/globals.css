@@ -1,26 +1,109 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  transition: all 0.5s ease-in-out !important;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  font-family: var(--font-arabic), sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #402054;
+  height: auto;
+  width: 100%;
+  overflow-x: hidden;
+}
+input,
+select,
+option {
+  border: 3px solid transparent;
+  outline: none;
+}
+option {
+  color: #000;
+}
+label {
+  font-weight: 100 !important;
+  font-size: 13px;
+}
+form p {
+  font-size: 12px;
+}
+.loading {
+  animation: rotate 2s linear infinite;
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 750px) {
+  #main {
+    width: 90%;
+  }
+}
+#main::after,
+#main::before {
+  content: "";
+  height: 400px;
+  position: absolute;
+  width: 20%;
+}
+#main::before {
+  left: 0px;
+  background: #4da6ff83;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  animation: colorTrans2 1s infinite ease-in-out alternate forwards;
+}
+#main::after {
+  right: 0px;
+  background: #f4c15379;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  animation: colorTrans1 1s infinite ease-in-out 1s alternate forwards;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes colorTrans1 {
+  to {
+    background: #f4c153;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes colorTrans2 {
+  to {
+    background: #4da6ff;
+  }
+}
+#main a {
+  padding: 20px !important;
+}
+main a:hover {
+  background: #4da6ff !important;
+  transform: translateY(-10px) !important;
+}
+@media (max-width:700px) {
+  form{
+    width: 100vw;
+  }
+}
+.info:not(:last-of-type){
+  border-bottom: 1px solid #000 !important ;
+}
+@media (max-width:600) {
+  .data{
+    width: 350px !important;
+    height: 80vh;
+  }
 }
