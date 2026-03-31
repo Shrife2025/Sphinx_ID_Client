@@ -88,7 +88,7 @@ export default function Form() {
     }, [formData, touch])
     useEffect(() => {
         const checkSession = async () => {
-            const res = await fetch("https://sphinx-id-wtp1.vercel.app/", {
+            const res = await fetch("https://sphinx-id-wtp1.vercel.app/getsession", {
                 method: "GET",
                 credentials: "include",
                 cache: "no-store"
